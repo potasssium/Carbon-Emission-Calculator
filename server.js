@@ -4,7 +4,7 @@ const cors = require("cors")
 const port = 3001;
 const app = express();
 
-var corsOptions = {
+const corsOptions = {
     origin: "http://localhost:5173",
     credentials: true
 }
@@ -61,7 +61,7 @@ app.post('/calculate', (req, res) => {
 
 
     } catch(err){
-        console.error('Theres and error idiot, line 18 server.js: ', err)
+        console.error('Theres an error idiot, line 64 server.js: ', err)
         res.status(500).json({ error: 'Internal server error'})
     }
 })
